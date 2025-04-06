@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job - Joblyft</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="post-job.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Joblyft</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="job-search.html">Search Jobs</a>
+            <a href="post-job.html" class="active">Post a Job</a>
+        </div>
+    </nav>
+
+    <main class="post-job-container">
+        <div class="form-section">
+            <h1>Post a New Job</h1>
+            <form id="jobPostForm">
+                <div class="form-group">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" id="companyName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="jobTitle">Job Title</label>
+                    <input type="text" id="jobTitle" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="jobType">Job Type</label>
+                    <select id="jobType" required>
+                        <option value="">Select Job Type</option>
+                        <option value="full-time">Full Time</option>
+                        <option value="part-time">Part Time</option>
+                        <option value="internship">Internship</option>
+                        <option value="contract">Contract</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="industry">Industry</label>
+                    <select id="industry" required>
+                        <option value="">Select Industry</option>
+                        <option value="tech">Technology</option>
+                        <option value="finance">Finance</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="education">Education</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="salary">Salary Range (Optional)</label>
+                    <div class="salary-inputs">
+                        <input type="number" id="salaryMin" placeholder="Min">
+                        <span>to</span>
+                        <input type="number" id="salaryMax" placeholder="Max">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Job Description</label>
+                    <textarea id="description" rows="6" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="qualifications">Required Qualifications</label>
+                    <textarea id="qualifications" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactInfo">Contact Information</label>
+                    <input type="email" id="contactInfo" required placeholder="Email address">
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Job Posting</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <h2>Job Posting Submitted</h2>
+            <p>Your job posting has been submitted successfully and is pending review. We'll notify you once it's approved.</p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script src="post-job.js"></script>
+</body>
+</html> 

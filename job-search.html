@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search - Joblyft</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="job-search.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Joblyft</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="job-search.html" class="active">Search Jobs</a>
+            <a href="post-job.html">Post a Job</a>
+        </div>
+    </nav>
+
+    <main class="search-container">
+        <div class="search-section">
+            <h1>Find Your Dream Job</h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search jobs...">
+                <button id="searchBtn">Search</button>
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" placeholder="Enter location">
+                </div>
+                <div class="filter-group">
+                    <label for="jobType">Job Type</label>
+                    <select id="jobType">
+                        <option value="">All Types</option>
+                        <option value="full-time">Full Time</option>
+                        <option value="part-time">Part Time</option>
+                        <option value="internship">Internship</option>
+                        <option value="contract">Contract</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="industry">Industry</label>
+                    <select id="industry">
+                        <option value="">All Industries</option>
+                        <option value="tech">Technology</option>
+                        <option value="finance">Finance</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="education">Education</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <div id="jobResults" class="job-list">
+                <!-- Job results will be populated here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <h2>Job Application Submitted</h2>
+            <p>Your application has been submitted successfully and is pending review.</p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script src="job-search.js"></script>
+</body>
+</html> 
